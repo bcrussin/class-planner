@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClassTag } from '../shared/class-tags/class-tag';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-task-card',
@@ -26,6 +27,10 @@ export class TaskCardComponent implements OnInit {
   tagLightColor?: string;
   @Input()
   tagDarkColor?: string;
+  @Input()
+  dueDate: string;
+  @Input()
+  dueTime: string;
   @Input()
   link: string;
 

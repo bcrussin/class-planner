@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Task } from './task.model';
 import { ClassTag } from './class-tags/class-tag';
+import { Time } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -37,7 +38,13 @@ export class TasksService {
     return this.tasks.indexOf(task);
   }
 
-  add(data: { title: string; description: string; classTag: ClassTag }) {
+  add(data: {
+    title: string;
+    description: string;
+    classTag: ClassTag;
+    dueDate: Date;
+    dueTime: Time;
+  }) {
     let task = new Task(data);
     let id = this.tasks.push(task) - 1;
 
@@ -47,12 +54,20 @@ export class TasksService {
 
   update(
     id: number,
-    data: { title: string; description: string; classTag: ClassTag }
+    data: {
+      title: string;
+      description: string;
+      classTag: ClassTag;
+      dueDate: Date;
+      dueTime: Time;
+    }
   ) {
     let task = this.tasks[id];
     task.title = data.title;
     task.description = data.description;
     task.classTag = data.classTag;
+    task.dueDate = data.dueDate;
+    task.dueTime = data.dueTime;
 
     this.save();
   }

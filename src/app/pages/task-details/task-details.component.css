@@ -27,6 +27,14 @@
   flex-direction: row;
 }
 
+.title {
+  padding: 0 8px;
+  height: 32px;
+  font-size: 14pt;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
 .class-container {
   flex: 0 0 110px;
   display: flex;
@@ -59,12 +67,25 @@ label {
   font-style: italic;
 }
 
-.title {
-  padding: 0 8px;
-  height: 32px;
-  font-size: 14pt;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
+.details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.details-container > div * {
+  display: block;
+  margin-right: 14px;
+}
+
+.details-container label {
+  font-size: 90%;
+}
+
+.details-container input {
+  width: auto;
+  padding: 4px 6px;
 }
 
 .description {

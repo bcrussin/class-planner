@@ -13,6 +13,8 @@ export class Task {
     title: string;
     classTag: ClassTag;
     description: string;
+    dueDate: Date;
+    dueTime: Time;
   }) {
     if (data === undefined) {
       this.title = '';
@@ -21,6 +23,9 @@ export class Task {
       this.title = data.title;
       this.classTag = data.classTag;
       this.description = data.description;
+
+      this.dueDate = data.dueDate;
+      this.dueTime = data.dueTime;
     }
   }
 }

@@ -7,11 +7,11 @@
       <div class="task-details">
         <div class="due-date">
           <img class="icon" src="assets/calendar.svg" />
-          <p>Apr 26</p>
+          <p>{{ dueDate }}</p>
         </div>
         <div class="due-date">
           <img class="icon" src="assets/clock.svg" />
-          <p>9:00am</p>
+          <p>{{ dueTime }}</p>
         </div>
         <div #tagElem class="task-card-tag" (click)="onTagClick($event)"></div>
       </div>

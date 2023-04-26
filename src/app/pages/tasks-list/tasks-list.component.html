@@ -19,6 +19,8 @@
       [className]="task?.classTag?.name"
       [tagLightColor]="task?.classTag?.lightColor"
       [tagDarkColor]="task?.classTag?.darkColor"
+      [dueDate]="task?.dueDate ? task.dueDate.toLocaleString() : 'No Due Date'"
+      [dueTime]="task?.dueTime ? task.dueTime.toString() : 'None'"
     ></app-task-card>
   </div>
 </div>

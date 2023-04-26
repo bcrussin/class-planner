@@ -26,6 +26,28 @@
         </select>
       </div>
     </div>
+    <div class="section details-container">
+      <div>
+        <label>Due Date</label>
+        <input
+          type="date"
+          name="dueDate"
+          id="dueDate"
+          class="control"
+          [ngModel]="task.dueDate"
+        />
+      </div>
+      <div>
+        <label>Due By</label>
+        <input
+          type="time"
+          name="dueTime"
+          id="dueTime"
+          class="control"
+          [ngModel]="task.dueTime"
+        />
+      </div>
+    </div>
 
     <br />
 

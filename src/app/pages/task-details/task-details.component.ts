@@ -53,6 +53,8 @@ export class TaskDetailsComponent implements OnInit {
         title: form.value.title,
         description: form.value.description,
         classTag: this.tagsService.get(form.value.classTag),
+        dueDate: form.value.dueDate,
+        dueTime: form.value.dueTime,
       });
       console.log('Added: ' + index);
     } else {
@@ -60,6 +62,8 @@ export class TaskDetailsComponent implements OnInit {
         title: form.value.title,
         description: form.value.description,
         classTag: this.tagsService.get(form.value.classTag),
+        dueDate: form.value.dueDate,
+        dueTime: form.value.dueTime,
       });
     }
 
