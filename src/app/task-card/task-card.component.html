@@ -1,0 +1,25 @@
+<div #container #cardElem class="task-card-container">
+  <div class="link">
+    <div class="task-card-content" (click)="onCardClick()">
+      <div class="task-card-header">
+        <h1 #titleElem class="task-card-title">{{ title }}</h1>
+      </div>
+      <div class="task-details">
+        <div class="due-date">
+          <img class="icon" src="assets/calendar.svg" />
+          <p>Apr 26</p>
+        </div>
+        <div class="due-date">
+          <img class="icon" src="assets/clock.svg" />
+          <p>9:00am</p>
+        </div>
+        <div #tagElem class="task-card-tag" (click)="onTagClick($event)"></div>
+      </div>
+      <div class="task-card-description">
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delete-button" (click)="onDeleteClick()">✕</div>
+</div>

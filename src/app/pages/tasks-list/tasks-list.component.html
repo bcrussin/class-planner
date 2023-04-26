@@ -1,0 +1,24 @@
+<div class="main-container">
+  <div class="search-bar-container">
+    <input
+      id="notes-search"
+      class="search-bar-input"
+      type="search"
+      placeholder="Search:"
+    />
+    <button id="create" routerLink="new">&plus;</button>
+  </div>
+
+  <div class="tasks-list">
+    <app-task-card
+      *ngFor="let task of tasks; index as i"
+      [link]="i.toString()"
+      (delete)="deleteTask(i)"
+      [title]="task.title"
+      [description]="task.description"
+      [className]="task?.classTag?.name"
+      [tagLightColor]="task?.classTag?.lightColor"
+      [tagDarkColor]="task?.classTag?.darkColor"
+    ></app-task-card>
+  </div>
+</div>

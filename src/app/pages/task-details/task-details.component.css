@@ -1,0 +1,126 @@
+.form-container {
+  max-width: 460px;
+  margin: 20px auto;
+  font-size: large;
+}
+
+.section {
+  flex-direction: column;
+  width: 100%;
+}
+
+.control {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e7e7e7;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.title-class-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.class-container {
+  flex: 0 0 110px;
+  display: flex;
+  margin-left: 16px;
+  height: 100%;
+}
+
+.class {
+  text-align: center;
+  height: 32px;
+  color: var(--dark-text);
+  appearance: none;
+
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+option {
+  background-color: #e7e7e7;
+}
+
+label {
+  display: inline-block;
+  margin-left: 4px;
+  margin-bottom: 6px;
+  color: var(--middle-grey);
+  font-style: italic;
+}
+
+.title {
+  padding: 0 8px;
+  height: 32px;
+  font-size: 14pt;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.description {
+  height: 80px;
+  min-height: 40px;
+  resize: vertical;
+  padding: 4px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.control.ng-invalid.ng-touched {
+  box-shadow: inset 0 0 5px red;
+}
+
+.actions {
+  float: right;
+}
+
+.actions button {
+  cursor: pointer;
+  margin: 18px 0 0 14px;
+}
+
+#cancel {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: var(--light-fade-text);
+}
+
+#save {
+  background-color: var(--purple);
+  color: var(--light-text);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#save:disabled {
+  background-color: var(--purple-disabled);
+  color: #e7e7e7;
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: dark) {
+  .control {
+    background-color: #1d1d1d;
+    color: var(--light-text);
+    border: 1px solid #333333;
+  }
+
+  option {
+    background-color: #1d1d1d;
+  }
+}

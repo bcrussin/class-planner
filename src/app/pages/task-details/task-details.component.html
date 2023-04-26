@@ -1,0 +1,46 @@
+<div class="form-container">
+  <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <div class="title-class-container">
+      <div class="section title-container">
+        <label>Title</label>
+        <input
+          class="control title"
+          type="text"
+          name="title"
+          [ngModel]="task.title"
+          required
+        />
+      </div>
+      <div class="section class-container">
+        <label>Class</label>
+        <select
+          #classTagSelector
+          class="control class"
+          (change)="onClassSelect($event)"
+          name="classTag"
+          [ngModel]="task?.classTag?.name"
+        >
+          <option selected></option>
+          <option>IT 240</option>
+          <option>POSC 225</option>
+        </select>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="section description-container">
+      <label>Description</label>
+      <textarea
+        class="control description"
+        name="description"
+        [ngModel]="task.description"
+      ></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="cancel" (click)="cancel()">Cancel</button>
+      <button id="save" [disabled]="!taskForm.valid">Save</button>
+    </div>
+  </form>
+</div>

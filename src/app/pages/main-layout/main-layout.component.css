@@ -1,0 +1,38 @@
+.layout-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-content {
+  flex-grow: 1;
+  margin-top: 60px;
+  /*overflow-y: scroll;*/
+  padding: 0 15px;
+  z-index: 1;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  flex-shrink: 0;
+  height: 60px;
+  background: linear-gradient(to right, #6e20b7, #9058e2);
+  background-color: #6e20b7;
+  box-shadow: 0 0 10px #00000050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .top-bar {
+    background: linear-gradient(to right, #52169b, #7038b4);
+    background-color: #5d1eac;
+  }
+}
