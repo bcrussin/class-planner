@@ -2,6 +2,30 @@
 # Class Planner
 Learning Angular by creating a planner to organize classes and assignments.
 
+## Introduction
+
+This project was started by following a youtube tutorial aimed around creating a note-taking app:
+<https://www.youtube.com/watch?v=dlXEeOk-MrI&list=PLIjdNHWULhPR5cr7nkTvq6kTV8rbr6BVz>
+
+The tutorial was used to create the basic functionality of the app (creating and editing tasks).
+From that point on, the project has been self-guided.
+
+## Features
+
+### Current Features
+
+The user may:
+- Create tasks using the '+' button next to the search bar
+- Tasks require a title, and can also be given a class tag, due date/time, and description
+- Tasks are saved in localStorage between browser sessions
+
+### Upcoming Features
+
+Planned features include:
+- Search functionality
+- The ability to create and customize classes
+- A calendar/task view that can be used to plan ahead
+
 * * *
 
 # ClassPlanner
